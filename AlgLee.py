@@ -28,25 +28,34 @@ def addStartPointAndEndPoint():
 def setRandomObstacle():
     number_of_obstacle = int(input("set number of obstacle"))
     for x in range(number_of_obstacle):
-        labirintZla[numpy.random.randint(0, i)][numpy.random.randint(0, j)] = -1
+        x = numpy.random.randint(0, i)
+        y = numpy.random.randint(0, j)
+        if (labirintZla[x][y] != -2):
+            labirintZla[x][y] = -1
 
 
 def rt(k):
-    m = 0
     n = 0
+    m = 0
     while n < i:
         m = 0
         while m < j:
-
-
-
+                if (labirintZla[n][m] == -2):
+                    if (labirintZla[n][m - 1] != k):
+                        labirintZla[n][m - 1] = k
+                    if (labirintZla[n][m + 1] != k):
+                        labirintZla[n][m + 1] = k
+                    if(labirintZla[n-1][m]!=k):
+                        labirintZla[n-1][m] = k
+                    if(labirintZla[n + 1][m] != k):
+                        labirintZla[n + 1][m] = k
 
             m += 1
         n += 1
 
 
-
 changeAllMatrix(0)
 addStartPointAndEndPoint()
 setRandomObstacle()
+rt(1)
 print(labirintZla)
