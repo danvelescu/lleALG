@@ -48,7 +48,7 @@
 array = [12, 23, 12, 312, 3, 3, 3, 23, 12]
 dictionary = {"s": "asd", "sada": 1, "Key": "Value"}
 tuple = (1, 2, 31, 23)
-set = {"ss", "Asdas", "ss", "Asdas", 1, 1, 1, 1, 1, 11, 1, 1}
+set = {"ss", "Asda s", "ss", "Asdas", 1, 1, 1, 1, 1, 11, 1, 1}
 
 
 def nameOfFunction(array):
