@@ -49,7 +49,6 @@ def rt(k):
                         labirintZla[n-1][m] = k
                     if(labirintZla[n + 1][m] != k):
                         labirintZla[n + 1][m] = k
-
             m += 1
         n += 1
 
