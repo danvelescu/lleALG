@@ -69,13 +69,17 @@ class Road:
 
     def set_car(self, car):
         car.id = len(self.car_list)
-        self.car_list = car
+        self.car_list.append(car)
         self.road[car.coord_X][car.coord_Y] = 1
 
 
 car1 = Car()
+car2 = Car()
+car2.coord_X = 1
+car2.coord_Y = 1
 road1 = Road()
 road1.set_car(car1)
+road1.set_car(car2)
 road1.prindRoad()
 # Класс транспорт и класс машина.
 # Машина может ехать по координатам.
